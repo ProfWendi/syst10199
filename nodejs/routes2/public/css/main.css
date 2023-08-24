@@ -1,0 +1,30 @@
+html, body {
+    font: 20px Arial, sans-serif;
+}
+
+header, footer {
+    background-color: lavender;
+    border: solid purple;
+    border-width: .1rem;
+    box-shadow: 4vw 4vw 2vw #555;
+    padding: .5rem;
+}
+
+figure {
+    border-width: .2rem;
+    margin: .5rem;
+    padding: .25rem;
+    max-width: 50%;
+}
+
+figure > img {
+    width: 400px;
+}
+
+figcaption {
+    border-top: .1em solid purple;
+    color: purple;
+    font-weight: bold;
+    padding: .25rem;
+}
+
