@@ -2,11 +2,16 @@ html, body {
     font: 20px Arial, sans-serif;
 }
 
+header, footer, figure {
+    border: solid purple;
+    border-radius: 5px;
+}
+
 header, footer {
     background-color: lavender;
-    border: solid purple;
     border-width: .1rem;
-    box-shadow: 4vw 4vw 2vw #555;
+    box-shadow: .3em .3em .2em #555;
+    margin: .5em .1em;
     padding: .5rem;
 }
 
@@ -14,17 +19,35 @@ figure {
     border-width: .2rem;
     margin: .5rem;
     padding: .25rem;
-    max-width: 50%;
+    text-align: center;
 }
 
 figure > img {
-    width: 400px;
+    max-width: 100%;
 }
 
 figcaption {
     border-top: .1em solid purple;
     color: purple;
+    font-size: 1.2em;
     font-weight: bold;
     padding: .25rem;
 }
 
+@media only screen and (min-width: 768px) {
+    figure > img {
+        max-width: 700px;
+    }
+    figure {
+        max-width: 750px;
+    }
+}
+
+@media only screen and (min-width: 1098px) {
+    figure > img {
+        max-width: 1000px;
+    }
+    figure {
+        max-width: 1050px;
+    }
+}
