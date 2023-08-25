@@ -3,6 +3,7 @@
 
 const port = 3000,
     http = require("http"),
+    // a node.js module that allows you to work with the file system
     fs = require("fs"),
     // a third party module https://www.npmjs.com/package/chinese-year
     chineseYear = require("chinese-year");
@@ -17,7 +18,7 @@ http.createServer((req, res) => {
 
         // build a URL object with the app's host name and 
         // the request url
-        let urlObj = new URL(req.url, `http://${req.headers.host}`);
+        const urlObj = new URL(`${req.headers.host}${req.url}`);
        
         // get the parameter for the year input
         const queryString = urlObj.searchParams;
@@ -27,7 +28,7 @@ http.createServer((req, res) => {
         year = (year) ? year : new Date().getFullYear();
 
         // get the animal for the year
-        let animal = chineseYear.getAnimal(year);    
+        const animal = chineseYear.getAnimal(year);    
         // for debugging
         console.log("url: " + urlObj); 
         console.log("query: " + queryString);
@@ -44,7 +45,6 @@ http.createServer((req, res) => {
             if (error) { // error finding/reading file
                 res.statusCode = 404; // 404 = NOT FOUND
                 res.write("<h1>File Not Found</h1>");
-                console.log(req.url);
                 console.log(error);  // for debugging
 
             } else {  // no errors, get the file
