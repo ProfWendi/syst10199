@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Circles</title>
+  </head>
+  <body>
+    <header>
+      <h1>Circles</h1>
+    </header>
+    <% if (circle) { %>
+      <p><%= circle %></p>
+      <p>Circumference: <%= circle.circumference %>
+      <br>Area: <%= circle.area %></p>
+    <% } %>
+
+    <form method="post" action="/mvc_model/circle">
+      <div><label for="rad">Radius:
+        <input type="text" name="radius" id="rad" pattern="\d+(\.?\d*)">
+      </label></div>
+      <div><button type="submit">Make A Circle</button></div>
+    </form>
+    
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+</html>
