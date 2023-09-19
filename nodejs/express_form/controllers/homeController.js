@@ -1,8 +1,8 @@
-exports.renderIndex = (req, res) => {
+module.exports.renderIndex = (req, res) => {
     res.render("index");
 };
 
-exports.renderResult = (req, res) => {
+module.exports.renderResult = (req, res) => {
     res.render("result", { 
         username: req.body.username,
         year: req.body.year, 

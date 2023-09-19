@@ -1,6 +1,6 @@
 const chineseYear = require("chinese-year");
 
-exports.getAnimal = (req, res) => {
+module.exports.getAnimal = (req, res) => {
     // make sure the year input has an actual year in it
     if (!req.body.year) {
         req.body.year = new Date().getFullYear();
