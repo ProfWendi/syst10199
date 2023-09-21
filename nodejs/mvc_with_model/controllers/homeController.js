@@ -1,5 +1,5 @@
 // import the circle.js module
-const circle = require("../models/circle.js");
+const Circle = require("../models/circle.js");
 
 // render the index page when it's a get request, no circle yet
 module.exports.renderIndex = (req, res) => {
@@ -10,12 +10,12 @@ module.exports.renderIndex = (req, res) => {
 // instead of its own controller
 module.exports.getCircle = (req, res) => {
 
-    // if there's no radius, use the default circle
-    if (!req.body.radius) {
-        req.body.circle = circle.getDefaultCircle();
-    } else { // create a circle with the input radius
-        req.body.circle = circle.getCircle(req.body.radius);
+    if (req.body.radius) {
+        req.body.circle = new Circle(req.body.radius);
+    } else {
+        req.body.circle = new Circle();
     }
+
 }
 
 // renders the index page with a circle result
