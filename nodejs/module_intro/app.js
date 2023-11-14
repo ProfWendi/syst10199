@@ -1,6 +1,7 @@
 "use strict";
 // app.js 
 
+
 const port = 3000,
     http = require("http"),
     // a node.js module that allows you to work with the file system
@@ -8,6 +9,7 @@ const port = 3000,
     // a third party module https://www.npmjs.com/package/chinese-year
     chineseYear = require("chinese-year");
 
+    
 http.createServer((req, res) => {
     // response will be in text/html
     res.setHeader("Content-Type", "text/html");
@@ -18,8 +20,8 @@ http.createServer((req, res) => {
 
         // build a URL object with the app's host name and 
         // the request url
-        const urlObj = new URL(`${req.headers.host}${req.url}`);
-       
+        const urlObj = new URL(`https://${req.headers.host}${req.url}`);
+
         // get the parameter for the year input
         const queryString = urlObj.searchParams;
         let year = queryString.get("year");
