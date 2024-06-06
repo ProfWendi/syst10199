@@ -1,0 +1,19 @@
+1. always use the lowest scope possible and pass values locally when needed - it makes the code more modular/re-usable; otherwise when you re-use your code you'll have to waste time making sure you have the right global variables (and what if they conflict with globals you already have for something else??)
+
+2. a) the error is saying that it doesn't understand what "func" is because the method hasn't been defined yet: declared functions are hoisted, function expressions are not hoisted
+
+2. b) no because it's using a declared function (so it's hoisted and you can call it from anywhere in the file)
+
+Methods/Functions:
+
+1. both are sub routines of re-usable code that perform a task, both can take arguments and return a value; you can create anonymous functions/methods in both but you probably won't learn that in Java until late in the course; in both languages, declared functions/methods are hoisted
+
+2. the syntax is different:
+- javascript: function name() { ... }
+- java: modifier(s) returnType name() { ... }
+JavaScript doesn't allow for function overloading like Java does.
+In JavaScript, a function can return any type of data but in Java you have to clearly define exactly what type a method returns and it can't return any other type.
+There might be others I can't think of at the moment...
+
+3. in JS, all functions return a value - if the function does not have a return statement, it returns the type undefined
+

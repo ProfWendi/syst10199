@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Week 2 Worksheet: Q3</title>
+    <script src="scripts/ex3.js"></script>
+    <link rel="stylesheet" href="css/ex3.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 2 Worksheet</h1>
+        <h2>Question 3</h2>
+    </header>
+
+    <main>
+
+        <form name="demoform">
+            <div><label for="itemName">Item Name:
+                    <input type="text" id="itemName" name="itemname" 
+                    required pattern="[a-zA-Z]+">
+                </label>
+                <br>
+                <label for="itemId">Item ID:
+                    <input type="text" id="itemId" name="itemid" 
+                    required pattern="[a-zA-Z]{2}\d{4}">
+                </label>
+            </div>
+            <div><label for="quantity">Quantity:
+                    <input type="number" id="quantity" name="qty" 
+                    min="1" value="10" required>
+                </label></div>
+            <div><label for="yarn">Yarn Type:
+                    <select id="yarn" name="yarntype">
+                        <option value="natural">Natural Fibre</option>
+                        <option value="synthetic">Synthetic Fibre</option>
+                        <option value="blend">Fibre Blend</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <br>
+                <label for="othertype">Other:
+                    <input type="text" id="othertype" name="other" disabled>
+                </label>
+            </div>
+            <div><input type="submit"></div>
+        </form>
+
+    </main>
+
+    <footer>
+        <address>&copy; 2023 Wendi Jollymore</address>
+        <nav>
+            <a href="https://sheridancollege.ca">Sheridan College</a>
+            <a href="https://terminallearning.com">Terminal Learning</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

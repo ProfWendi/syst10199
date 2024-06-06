@@ -1,0 +1,39 @@
+html, body {
+	font: 16px Helvetica,Arial,sans-serif;
+}
+div {
+   margin: .3em;
+}
+
+table {
+   border: .2em groove teal;
+   border-collapse: collapse;
+}
+
+td, th {
+    border: .1em solid teal;
+    padding: .2em;
+}
+
+caption {
+    color: teal;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+input:invalid {
+    background-color: pink;
+}
+
+input[type=submit] {
+    background-color: teal;
+    border: .1em solid teal;
+    color: white;
+    font-weight: bold;
+    padding: .25em;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    color: teal;
+}

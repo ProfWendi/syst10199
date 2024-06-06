@@ -1,0 +1,30 @@
+html, body {
+	font: 16px Helvetica,Arial,sans-serif;
+}
+
+form {
+	border: .2em solid navy;
+	margin: .4em;
+	padding: .25em;
+}
+
+input[type=submit] {
+	border: .1em solid navy;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+	
+input[type=text]:invalid,
+input[type=number]:invalid {
+    background-color: pink;
+}
+
+.error {
+    color: red;
+    display: none;
+    font-weight: bold;
+    padding: .5em;
+}

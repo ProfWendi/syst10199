@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Week 2: Forms Ex 2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Wendi Jollymore">
+	<link rel="stylesheet" href="css/ex2.css">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Week 2: Forms Ex 2</h1>
+      <h2>Freddie's Farm</h2>
+    </header>
+
+
+    <form>
+<p id="descUnitName">Unit Name is a name or description of the units e.g. bushel, basket, pint.</p>
+      <table>
+        <caption>Produce Inventory</caption>
+        <tr>
+          <th scope="col" id="lblItemDesc">Item Description</th>
+          <th scope="col" id="lblUnitName">Unit Name</th>
+          <th scope="col" id="lblNumUnits">Quantity</th>
+          <th scope="col" id="lblSellPrice">Sell Price</th>
+        </tr>
+        <tr>
+          <td><input type="text" title="testing title" required aria-labelledby="lblItemDesc" id="desc1"></td>
+          <td><input type="text" size="7" aria-labelledby="lblUnitName" aria-describedby="descUnitName" id="unit1"></td>
+          <td><input type="num" size="7" required aria-labelledby="lblNumUnits" id="num1"></td>
+          <td><input type="text" size="7" aria-labelledby="lblSellPrice" id="price1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" required aria-labelledby="lblItemDesc" id="desc2"></td>
+          <td><input type="text" size="7" aria-labelledby="lblUnitName" aria-describedby="descUnitName" id="unit2"></td>
+          <td><input type="num" size="7" required aria-labelledby="lblNumUnits" id="num2"></td>
+          <td><input type="text" size="7" aria-labelledby="lblSellPrice" id="price2"></td>
+        </tr>
+        <tr>
+          <td><input type="text" required aria-labelledby="lblItemDesc" id="desc3"></td>
+          <td><input type="text" size="7" aria-labelledby="lblUnitName" aria-describedby="descUnitName" id="unit3"></td>
+          <td><input type="num" size="7" required aria-labelledby="lblNumUnits" id="num3"></td>
+          <td><input type="text" size="7" aria-labelledby="lblSellPrice" id="price3"></td>
+        </tr>
+        <tr>
+          <td><input type="text" required aria-labelledby="lblItemDesc" id="desc4"></td>
+          <td><input type="text" size="7" aria-labelledby="lblUnitName" aria-describedby="descUnitName" id="unit4"></td>
+          <td><input type="num" size="7" required aria-labelledby="lblNumUnits" id="num4"></td>
+          <td><input type="text" size="7" aria-labelledby="lblSellPrice" id="price4"></td>
+        </tr>
+        <tr>
+          <td><input type="text" required aria-labelledby="lblItemDesc" id="desc5"></td>
+          <td><input type="text" size="7" aria-labelledby="lblUnitName" aria-describedby="descUnitName" id="unit5"></td>
+          <td><input type="num" size="7" required aria-labelledby="lblNumUnits" id="num5"></td>
+          <td><input type="text" size="7" aria-labelledby="lblSellPrice" id="price5"></td>
+        </tr>
+      </table>
+      <div><input type="submit" value="Add Inventory"></div>
+    </form>
+
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+
+</html>

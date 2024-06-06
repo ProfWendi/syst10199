@@ -1,0 +1,46 @@
+Review Questions
+1. when you click a link (on a page, from bookmark, etc)
+a. browser makes a request - url contains domain, path, file, etc
+b. request is sent to server (domain, there's more going on behind the scenes re. dns lookup etc but you don't need to describe that)
+c. server receives request and opens it
+d. server locates the requested file
+e. i) if file is located succesfully, it is processed (e.g. run any server-side code if there is any); output/requested file is packaged in a response with 200 OK status code 
+e. ii) if file is not found (or other error e.g. incorrect permissions, etc) response is packaged up with appropriate response code e.g. 404, 403, etc; along with an appropriate error page
+f. response is sent back to client
+g. client opens response and renders the response body in the browser
+h. if the page that was received contains references to other files e.g. .js, images, .css, then those files are requested in the same way as their elements are rendered
+
+2. recall PE:
+    1 Content and Structure e.g HTML
+    2 Appearance and Layout e.g. CSS
+    3 Functionality and Interactivity e.g. JavaScript
+JavaScript is in #3
+- learned #1 and #2 in term 1
+- follow the process you learned in term 1, but now add #3
+
+3. wcag principles (POUR)
+Perceivable: all users should be able to "be aware of" or "notice" important information with at least one of their senses (although we tend to ignore smell and taste in today's technology) regardless of which senses they may have or don't have
+Operable: all users should be able to "use" the interactive components of a web site, regardless of ability
+Understandable: all users should be able to comprehend important information/content, regardless of ability
+Robust: the page application should not crash when a user is accessing/using the page/app with an assistive device; the page/app should also be reliable when used with technologies not yet invented
+
+4. Semantic elements are those elements whose element name clearly defines either the content or purpose of the element.
+These are important, because most assistive devices convey information to their users or operate in an accommodating way to their users based on what semantic elements are used.
+e.g. a screen reader announces "header" and "footer" but does not announce a <div> (which is a non-semantic element).
+
+WAI-ARIA Questions
+1. WCAG Web Content Acessibility Guidelines = the success criteria and techniques followed to make web pages and applications more accessible
+ARIA Accessible Rich Internet Applications is a set of guidelines and WCAG Techniques that define how to make interactive web applications more accessible.
+
+2. Regions are areas of a document/page/app e.g. footer, header, navigation, etc.
+Landmarks are places that a user that uses keyboard navigation can jump to with shortcuts or special keys.  Landmarks include regions, links, form fields, and buttons.
+
+3. ARIA is added by using special ARIA attributes to HTML elements.
+
+4. ARIA rules:
+1. Use semantic elements or the appropriate attributes whenever possible, don't use ARIA unless you need to and don't just repurpose a different element.
+2. Don't change an element's semantics.
+3. All interactive elements must be usable with a keyboard and follow standard design patterns.
+4. Items that are normally focusable should never be hidden from the accessibility tree unless there's an alternative for the accessibility tree only.
+5. All interactive elements must have an accessible name (see SC 2.5.3 https://www.w3.org/WAI/WCAG21/Understanding/label-in-name, SC 2.4.4 https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context)
+

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Week 2: Forms Ex 1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Wendi Jollymore">
+	<link rel="stylesheet" href="css/ex1.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Week 2: Forms Ex 1</h1>
+    </header>
+
+    <form>
+      <div><label for="url">Enter URL:
+        <input type="url" id="url" name="url" required>
+      </label></div>
+      <div><label for="title">Enter Page Title:
+        <input type="text" id="title" name="urltitle">
+      </label></div>
+      <div><label for="rate">Rating (1 is excellent, 5 is poor)
+        <input type="number" id="rate" min="1" max="5" value="3" required>
+      </label></div>
+      <div><button type="submit">Add URL</button></div>
+    </form>
+
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+  </body>
+</html>

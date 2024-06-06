@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Week 2 Worksheet: Q4</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Wendi Jollymore">
+    <link rel="stylesheet" href="css/ex3.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Week 2 Worksheet</h1>
+	  <h2>Question 4</h2>
+    </header>
+
+    <h2>Sydney's Custom Cat Trees</h2>
+
+    <form name="custom">
+        <p><label type="num">Number of Levels:
+            <input type="number" min="2" max="5" value="3" id="num"
+                name="numlevels" required>
+        </label></p>
+        <fieldset>
+            <legend>Choose Fabric:</legend>
+            <label for="basic">
+                <input type="radio" id="basic" name="fabric" value="2.99">
+                Basic Fabric
+            </label>
+            <br>
+            <label for="carpet">
+                <input type="radio" id="carpet" name="fabric" value="3.29">
+                Short Pile Carpet
+            </label>
+            <br>
+            <label for="premium">
+                <input type="radio" id="premium" name="fabric" value="4.49">
+                Premium Plush
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Select Options</legend>
+            <label for="hammock">
+                <input type="checkbox" id="hammock" name="optham" value="4.99">
+                Hammock (4.99)
+            </label>
+            <br>
+            <label for="tube">
+                <input type="checkbox" id="tube" name="opttube" value="7.95">
+                Extra Tube (7.95)
+            </label>
+            <br>
+            <label for="toy">
+                <input type="checkbox" id="toy" name="opttoy" value=".59">
+                Toy on String (0.59)
+            </label>
+            <br>
+            <label for="scratch">
+                <input type="checkbox" id="scratch" name="optscratch" value="1.99">
+                Scratch Pad (1.99)
+            </label>
+        </fieldset>
+		
+		<!-- used in a different exercise, can ignore this part: -->
+        <p id="total">Estimated Total: <span></span></p>
+		
+        <p><input type="submit"></p>
+    </form>
+    <footer>
+      <address>&copy; 2023 Wendi Jollymore</address>
+    </footer>
+
+  </body>
+</html>
