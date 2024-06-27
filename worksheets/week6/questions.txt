@@ -1,0 +1,26 @@
+week 6 worksheet
+
+questions
+
+1. 
+- javascript objects are "prototypal" - inheritance is not done in the same way as it is done in Java - in JS, you create an object and then override it by adding properties, you don't formally create child classes
+- in javascript, the formal class syntax is simpler, and you don't even need to use it - there are several other ways you can create objects that don't require the strict and formal class template you use in Java, e.g. using a create-function or simple Constructor function, or you can create a single instance on-the-fly using an initialization block
+- in Java, you have class members and instance members, but in JavaScript, everything is a property (even functions)
+- in Java, you can have public, private, protected, or default access but in JavaScript, everything is public, there are no access modifiers
+
+2. in JS you create properties, although you can have accessor/mutator methods, they're not used for the same purpose as in Java
+
+3. it means that when you pass an object to a method, you are passing the memory address of the object and not just a copy or clone of the object
+- the effect is that when you modify the paramter object, it affects the original argument object 
+
+4. because in JS, everything is public, there are no access modifiers
+
+5. Producing code is the code that creates a result from a task that takes a bit of time or resources, the task that should be done "behind the scenes", it's often a "blocking operation", blocking the rest of the operations while they wait for the task to complete
+Consuming code is the code that is waiting for the result it needs from the producing code.
+
+6. a promise is an object that manages the connection between Producing Code and Consuming Code:
+- it starts the producing code when it is requested
+- it waits for the notification from the producing code that the code is finished
+- it takes the result from the producing code and makes it available to the consuming code
+
+7. the pizza shop example - see video/notes

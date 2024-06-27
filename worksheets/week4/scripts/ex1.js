@@ -3,15 +3,27 @@
 // exericse 1 week 4 worksheet
 
 
-// function expression: must go above calling statement
-let sumSeries = n => n * (n + 1) / 2;
+// named declared function
+function sum(n) {
+    if(n <= 0 || n > 100) {
+        return 0;
+    } else {
+        return n * (n + 1) / 2;
+    }
+}
 
-let num = parseInt(prompt("Enter a number."));
+// function expression
+// or you can start it like this:
+// let sum = n => {
+/*
+let sum = function(n) {
+    if(n <= 0 || n > 100) {
+        return 0;
+    } else {
+        return n * (n + 1) / 2;
+    }
+}
+*/
+// testing
+console.log(sum(10));
 
-alert(sumSeries(num));
-
-// declared function:
-
-/*function sumSeries(n) {
-	return n * (n + 1) / 2;
-}*/

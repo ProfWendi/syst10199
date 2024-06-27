@@ -8,9 +8,9 @@ const OT_RATE = 1.5;
 // function expression
 let calcPay = (hours, rate) => {
 	if (hours <= OVERTIME) {
-  	return hours * rate;
+  	    return hours * rate;
   } else {
-  	return OVERTIME * rate + (hours - OVERTIME) * (rate * OT_RATE);
+  	    return OVERTIME * rate + (hours - OVERTIME) * (rate * OT_RATE);
   }  
 }
 
@@ -25,9 +25,9 @@ alert(`Total Pay: ${totalPay}`);
 /*
 function calcPay(hours, rate) {
 	if (hours <= OVERTIME) {
-  	return hours * rate;
+  	    return hours * rate;
   } else {
-  	return OVERTIME * rate + (hours - OVERTIME) * (rate * OT_RATE);
+  	    return OVERTIME * rate + (hours - OVERTIME) * (rate * OT_RATE);
   }  
 }
 */

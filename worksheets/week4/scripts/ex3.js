@@ -7,6 +7,7 @@ const months = ["January", "February", "March", "April", "May", "June",
 	"July", "August", "September", "October", "November", "December"];
   
 let isLeapYear = year => year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+
 let maxDaysInMonth = (month, year) => {
 	switch(month) {
   	case 1:

@@ -7,13 +7,20 @@
 Methods/Functions:
 
 1. both are sub routines of re-usable code that perform a task, both can take arguments and return a value; you can create anonymous functions/methods in both but you probably won't learn that in Java until late in the course; in both languages, declared functions/methods are hoisted
+both can take arguments (both can define parameters)
+both can return a single value 
+both are blocks of re-usable code that can be called/invoked as needed
 
 2. the syntax is different:
 - javascript: function name() { ... }
 - java: modifier(s) returnType name() { ... }
 JavaScript doesn't allow for function overloading like Java does.
 In JavaScript, a function can return any type of data but in Java you have to clearly define exactly what type a method returns and it can't return any other type.
-There might be others I can't think of at the moment...
+- java can create class methods or instance methods
+- in java, methods with no return value return "void"
+- in JS, all functions return a value - functions with no return statement return "undefined"
+- in JS, functions are "values" - you can treat a function name like a variable
+
 
 3. in JS, all functions return a value - if the function does not have a return statement, it returns the type undefined
 

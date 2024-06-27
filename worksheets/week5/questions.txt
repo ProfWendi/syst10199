@@ -1,0 +1,35 @@
+week 5 dom
+
+questions
+1. bom = browser object model, dom = document object model
+the dom = all the objects (and their properties/functions) that make up the web document and all its elements and content
+- the dom is for any kind of document e.g. xml, not just html documents
+the bom = the objects (and their properties/functions) that make up the parts of the browser that you can work with using JS
+
+2. navigator contains properties with information about the browser software and 
+location contains properties about the current URL and functions that do things like redirect to a different URL
+window for the current window/tab, contains functions for showing dialogs, getting the computed style of document objects, etc
+
+3. the window object owns other objects that are used in scripts such as the console, document, history, location, navigation;
+it also has properties such as height and width, those that allow access to the location bar, menu bar, toolbar, and status bar;
+it also has functions such as those for dialogs, managing timers, fetching resources, retrieving computed styles, and manage window state e.g. close/open
+
+4. prompt(), alert(), confirm(), console object e.g. console.log() is actually window.console.log()
+later: getComputedStyle()
+
+5. the document object represents the current document in the current browser tab/window where the script is running
+it contains properties with document information such as lastModified, and properties that allow access to various parts of the document (e.g. document.head, document.body, document.children, etc.)
+it also contains methods that allow you to manipulate the DOM such as append/prepend/before/after(), createElement(), createAttribute(), createTextNode(), and functions that allow access to DOM objects such as querySelector/All().
+
+6. you can use any language to manipulate the DOM, not just JavaScript
+
+7. element nodes model elements, text nodes model all the text/characters in a document, and attribute nodes model the attributes that belong to elements
+
+8. <header>, <nav>, <section>, <footer>
+
+9. <h2>, <p>, <aside>, <p>
+
+10. <h3>, <p>, <figure>, <img>, <figcaption>
+
+11. <p>, <p>, <h3>, <figure>
+
