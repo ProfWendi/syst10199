@@ -1,0 +1,43 @@
+Week 9 workshet questions
+
+1. let theForm = document.forms[0];
+let theForm = document.forms.newInv;
+2. select.options[index].selected = true
+select.selectedIndex = index
+select.value = value
+3. txtFoo.form
+4. focus event occurs when the input control gains the focus (e.g. when a user clicks in/on it, tabs into/on it)
+blur event occurs when an input control loses the focus (e.g. when a user clicks on a different control or tabs away from the current control)
+5. to programmatically set the focus to a specific control
+6. when you want code to execute after an input control's value has changed (e.g. when the user leaves a text field after typing, after they change the selection in a selection list or checkbox, etc)
+for example, if you wanted to enable/disable other controls based on the option a user selected in a selection list
+7. input event is similar to change: it occurs when the input value of a control is modified by the user,
+for example it will execute each time the user changes the value of a text field i.e. when they press keys, backspace, paste text into it, etc.
+the event happens after the change is made
+8. client side - because it's more efficient and more convenient for users if you can capture any errors and have them fixed before the inputs go to the server
+- if the server finds the errors, the reponse is the same page, but you have to write code to put the user's inputs back into the fields - that's tedious
+server side - it's possible for invalid values to get through to the server even with good client-side validation e.g. cross site scripting, request intercepted, etc
+Also, there's no guarantee a client-side form and a server-side script will only ever work with each other: each one might one day be used with a different form/script
+- who knows if someone has done a good amount of validation?
+9. document.forms[0].elements.foo or document.forms[0].foo
+10. document.forms.testing.elements.foo or document.forms.texting.foo
+11. it's a back-reference to the form - it contains the form object that the input control belongs to 
+12. using its .value property
+13. using its .value property, although you could also use the check box's .checked property, which is true if the box is checked and false if the box is unchecked
+14. using the .value property of the name="" set for all the radio buttons in the group
+15. click event occurs when the registered button is clicked
+submit event is triggered automatically on the form object if the form contains a submit button that was clicked
+note that click on the submit button executes first if the submit button is registered to fire click events, then the form's submit event occurs
+submit occurs automatically - you do not have to register the form to fire submit events
+submitting the form causes the browser to make a request for whatever is in the form's action="" attribute; if the attribute is empty or missing, the current page is requested
+16. it stops the event from finishing
+you would use it if you were in an event handler and wanted to stop i.e. validating a form submit: if the validation code inside the submit event handler found invalid inputs, you could stop the form submission from happening so that the form doesn't make the request, which allows the user the opportunity to see and fix their errors
+17. for custom validation that can't be done with html validation attributes e.g. if you wanted to enable/disable a text input field when the user selects "Other" in a drop-down list
+18. a single criteria for validation e.g. if a text input field is "required" then that's one contstraint;
+if that same field has a minlength of 4, then that's another constraint
+19. reportValidity() tells the browser to inform the user of the any issues with the validity state of the form (or any of the form's input controls) i.e. shows any error messages
+checkValidity() returns true if the form and its elements passes all validity constraints and false if they fail (has errors)
+setCustomValidity() adds a custom error message to a specific element, which automatically makes that control flag as "invalid"
+- or you can set it to empty string "" to turn off the invalid state
+20. it contains the control's ValidityState object, which contains properties that define the state of validity of that control (whether its contraints pass or fail)
+- you would use it if you wanted to know what specific contraint is failing e.g. .valueMissing would be set to true if a field with the "required" attribute was left empty
