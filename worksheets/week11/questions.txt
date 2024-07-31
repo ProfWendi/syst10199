@@ -1,0 +1,28 @@
+Week 11 worksheet
+1.	Express.js is a framework we add on top of Node.js to do this that Node.js can’t do on its own.
+2.	Routing is when an incoming request is passed to an appropriate callback or set of callbacks for processing. Your code should examine the request url, request method (and possibly other information about the request) so that it can decide which callbacks should be used.
+A route handler is like an event handler for requests: it executes when an incoming request matches its criteria.
+3.	Middleware functions that execute in between other operations, they are the callback functions that execute for a particular request. The advantages of middleware:
+a.	You can have many different functions to handle different requests, instead of just having one callback that handles all requests
+b.	Functions are re-usable: you can use a specific middleware function on many different kinds of requests (e.g. any request to any url that contains form-encoded data)
+c.	You can write your own middleware functions, use some of the built-in middleware provided by Express, or even use middleware from 3rd-party modules: there are many to choose from.
+4. Application, Request, Response, Router
+5. require() imports the Express module so you can use the objects and functions that are part of Express, and the app = express() instantiates the main Express Application object (which contains properties and server methods such as listen()); it also creates the http.Server instance for you automatically.
+6. use() mounts a middleware function onto the middleware stack: it takes an optional url param (to match the incoming request, if provided) and a callback function. The callback is added to the middleware stack - the callback will execute for any request matching the url param. If no url param is provided, the callback will execute for all requests by default
+7. get() and post() both take a url param and a callback: they add those callbacks to the middleware stack for requests that match the url parameter. get() adds the criteria that the request must also be a GET request and post() adds the criteria that the request must also be a POST request
+8. GET requests are the default when a form has no/empty method="" attribute, for clicking URLs, visiting bookmarks/history, etc.  With a GET request, any query string is passed along in the request via the URL. With a POST request, a query string is passed along in the request inside the Request body.  GET requests are more efficient, but have limitations:
+- because the query string is in the url, it's not private and is limited to 2048 characters, and it can only be plain text
+- post requests can be any size and any type of data/object (although without https, the request body can still be examined)
+So use a GET request unless:
+- you are reading/writing to a database file, because if the user refreshes a GET request or revisits a URL from a GET request, the request will be re-executed which might cause the data to be added to the db/file again (a POST request will try to confirm resubmission in the browser)
+- you are sending large amounts of data or mixed types of data
+- you are sending sensitive/private data (although it's only secure if you're using POST *and* secure http)
+9. it contains the next function in the middleware stack - this is only needed by app.use() because app.use() is for mounting middleware that is executed before the next middleware executes (i.e. it's not the end).. the app.use() callback always needs to invoke next() so execute the next middleware in the stack
+app.get() and app.post() don't use next because they are end points, they are the last function to execute and they always send a response back to the client
+10. Node.js on its own can't handle POST requests, plus it doesn't support middleware so you would have to handle every single request in a single route handler, which gets ugly and doesn't support modular programming.  With Express, middleware functions allow you to create modular code that is re-usable.
+11. process is a core Node.js module - it contains an .env property that contains all the application's environment variables as key-value pairs or properties.
+We used it to store the port number our application uses
+12. a URL pattern is a sequence of characters that a URL needs to match for routing purposes; a path segment or url segment is a piece of the url/path, delimited by the forward- or back-slash e.g. /one/two/three/four.html has four path/url segments
+13. this mounts a middleware that executes for all requests that contain url-encoded data inside the request body (generally this would apply to POST requests); the function copies the data from the request body and copies into the Response.body property.
+14. www.foo.com/foobar?username=arti&termnum=2
+15/16/17 - this is your own reference you must create yourself
