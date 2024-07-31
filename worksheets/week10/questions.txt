@@ -1,0 +1,92 @@
+Week 10 worksheet questions
+
+1. Synchronous operations are performed one after the other in sequence, like a set of steps.
+ For example, you might have a program that first retrieves the user's credentials, then looks up the credentials in a database, then retrieve's that user's profile information, then prepares the profile page with the profile information, and then sends the request to the client.
+ Asynchronous operations can be performed at the same time using multiple threads.
+ For example, your phone can play music while it receives and displays a push notification from another application while you are editing a contact, 
+ and all of these things can happen at the same time.
+ 
+2. A framework is a collection of building blocks that can be used to build programs.
+Frameworks are used instead of writing a program from the very beginning with nothing:
+you can just use pre-build components to create your application instead of writing the code for those components yourself.
+
+3. Opinionated means you have to follow specific rules and structure and use the tools in specific ways in order to build an application, such as having certain files/directories, classes, etc.
+Unopinionated means you can use the tools in any way you like - any structure you like, any files/directories, use the classes how you want, etc.
+
+4. A blocking operation prevents any other operation from executing.
+Usually blocking operations are complex calculations or reading data from a file database, because the program has to wait for the operation to complete before it can do anything else.
+Non-blocking operations are operations that can be completed without blocking other operations.
+
+5. No: it's a runtime environment that allows JavaScript to run on the sever.
+
+6. Yes: it's a set of modules and other building blocks that run on top of Node.js; 
+it contains many classes that add to Node.js's existing classes, and adds features that Node.js doesn't have.
+
+7. writing both front-end and back-end code in the same language
+front-end is client-side parts of the app
+back-end is server-side parts of the app
+
+8. The event loop is a thread that is able to quickly process requests:
+Requests enter the event loop to be processed: non-blocking operations can be performed with callbacks, and blocking operations are passed to worker threads to execute.
+When the blocking operation is finished, the result sits in the queue and waits to be picked up by the event loop.
+The event loop can work on non-blocking tasks, bring in new requests, and pick up completed tasks from the queue as needed.
+
+9. Blocking operations block the event loop from doing anything else, which means that requests have to wait to be processed while the blocking operation is completed.
+That's why they are instead passed off to worker threads, who then notify the event loop when the task is complete, so that the result can be picked up when the event loop is free.
+
+10. - any kind of real-time chat/messaging/collaboration
+- apps with continuous data streaming
+- single-page apps
+- location-based apps
+- internet of things
+basically any app that has a lot of requests that need to be processed and have a lot of blocking operations
+
+11. Performance - it's really good at apps that have a lot of requests or heavy operations
+Unopinionated - you can build what you want how you want to build it
+You can do full-stack development
+It uses the NPM (node package manager) which makes it easy to manage application dependencies
+Scalability - you can add any other JavaScript modules to your app since Node is written in JS
+Node.js is supported on most hosting services
+It has a very large and active developer community
+There are lots of frameworks that sit on Node.js and there are new ones coming out all the time
+
+12. Node apps main purpose is to handle requests and send responses. 
+ith client-side JS, you're just creating dynamic or interactive functionality on a page.
+
+13. No, because it runs on the server, not in the browser.
+
+14. initializes the application e.g. sets the package name, the starting .js file, version, author, etc
+
+15. package.json contains the application configuration information created by running npm init
+
+16. A module is a collection of classes that can be added to your application.
+The http module contains classes that are used to handle http requests and responses, such as the Request and Response object.
+Core modules are those modules that come with Node.js (such as fs or http).
+Third party modules are modules written by other people.
+
+17. require() adds a reference to a module in your application so you can access its classes/constants/etc
+
+18. it's the server that runs and waits for and handles requests
+you use the .listen() method to start the server so that it waits for (listens on a specific port number) for requests
+you use the createServer() method to set up a callback that handles incoming requests
+
+19.  it executes each time a request arrives - it handles incoming requests and sends back responses
+the params it needs are the request object and the response object
+
+20.  it executes once when the server starts up
+it doesn't need any params/args
+
+21. it's the "OK" status code, it means the request was processed successfully 
+
+22/23: this is your own reference you must create yourself
+
+24. use npm install and the -s or --save flag to save it for this application only
+
+25. a set of key-value pairs: the keys are the name="" attribute values of a form's input controls and the values are the value="" for those input controls
+it's fomatted as key=value, each pair separated by & (ampersand)
+any special characters are encoded (generally any characters that aren't supported in a URL)
+
+26. package-lock.json contains configuration information about your application's dependencies
+/node_modules contains the actual code for the dependencies added to your application
+
+27. it's an object that represents the current module, it's where you place objects/variables/functions into in order to expose them publicly to other parts of the program, how you make your objects/variables/methods "public" to all other files in the application.
