@@ -23,6 +23,6 @@ app.get() and app.post() don't use next because they are end points, they are th
 11. process is a core Node.js module - it contains an .env property that contains all the application's environment variables as key-value pairs or properties.
 We used it to store the port number our application uses
 12. a URL pattern is a sequence of characters that a URL needs to match for routing purposes; a path segment or url segment is a piece of the url/path, delimited by the forward- or back-slash e.g. /one/two/three/four.html has four path/url segments
-13. this mounts a middleware that executes for all requests that contain url-encoded data inside the request body (generally this would apply to POST requests); the function copies the data from the request body and copies into the Response.body property.
+13. this mounts a middleware that executes for all requests that contain url-encoded data inside the request body (generally this would apply to POST requests); the function copies the data from the request body and copies into the Request.body property.
 14. www.foo.com/foobar?username=arti&termnum=2
 15/16/17 - this is your own reference you must create yourself

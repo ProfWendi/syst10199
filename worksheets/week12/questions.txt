@@ -1,0 +1,26 @@
+week 12 worksheet
+
+1. Model View Controller
+Model = the data/objects used by the application
+View = the UIs of the application
+Controller = the code that executes to update the model, use the model to perform operations triggered by the user on the UI, etc.
+2. Model = /model(s) directory
+- .json files, javascript objects
+View = /views directory
+- the dynamic html/ejs pages in the app
+- some also consider /public/*.html part of the views also even though they are static fiels
+Controller = /controller(s) directory
+- the javascript files that contain middleware functions you write yourself
+3. Embedded JavaScript - a special syntax that lets you put JS code inside an HTML file with an .ejs extension, the EJS code is processed server-side
+It allows you to create pages with dynamic content that comes from server-side processing tasks.
+4. <% %> scriptlet
+<%= %> output tag (escapes values)
+<%- %> output tag (doesn't escape values)
+<%# %> ejs comment
+5. <%= %> escapes any HTML characters e.g. > and < whereas <%- %> does not
+6. static files = files with no dynamic content/code e.g. plain html files, css, client-side javascript, images
+Typically stored in the /public directory using the normal html application structure e.g. public/images, public/css, etc.
+7. any request to any url is treated as a static file in the /public directory of the project, so the file is located and read directly into the response body without doing any kind of processing
+8. path.join() joins path segments into a path/url using the system's preferences e.g. whether or not a drive letter is included, forward or back slash, etc.
+__dirname always contains the absolute path to the file in which __dirname is used
+9/10/11 this is your own reference you must create yourself
