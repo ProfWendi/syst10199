@@ -1,0 +1,29 @@
+:root {
+    font: 16px Helvetica,Arial,sans-serif;
+    --main: #720EF1;
+    --accent: #c7f887;
+}
+
+header, footer, main {
+    margin: .25em 1em;
+    padding: .5em;
+}
+header, footer {
+    background-color: var(--accent);
+}
+
+table {
+    border: .2em solid var(--main);
+}
+
+td, th {
+    border: .1em dashed var(--main);
+    padding: .35em;
+}
+
+caption {
+    color: var(--main);
+    font-weight: bold;
+}
+
+

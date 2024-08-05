@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Week 12 Exercise 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 12 Exercise 1</h1>
+      <h2>Random Numbers</h2>
+    </header>
+
+    <main>
+      <p>Maximum number: <%=max%>
+      </p>
+      <p>
+        <% for (let i=1; i <=10; i++) { let n=Math.floor(Math.random() * max + 1); %>
+          <%=n%><br>
+        <%}%>
+      </p>
+    </main>
+
+    <footer>
+      <address>&copy; 2023 Firstname Lastname</address>
+    </footer>
+  </body>
+
+</html>

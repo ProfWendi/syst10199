@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Week 12 Exercise 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Week 12 Exercise 4</h1>
+      <h2>Employee List</h2>
+    </header>
+
+    <main>
+      
+      <table>
+        <caption>Employee List</caption>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+        </tr>
+        <% let count = 0;
+        for (let emp of employees) {%>
+          <tr>
+            <td><%=emp.id%></td>
+            <td><%=emp.name%>
+            <%=(emp.active)?"":"(inactive)"%></td>
+          </tr>
+        <%count++; }%>
+      </table>
+      <p>Number of Employees: <%=count%></p>
+    </main>
+
+    <footer>
+      <address>&copy; 2023 Firstname Lastname</address>
+    </footer>
+  </body>
+
+</html>

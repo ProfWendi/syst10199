@@ -1,0 +1,27 @@
+[
+    {
+        "id": "123",
+        "name": "Arti Gentilschi",
+        "active": true
+    },
+    {
+        "id": "456",
+        "name": "Sydney Greenstreet",
+        "active": false
+    },
+    {
+        "id": "789",
+        "name": "Sophie",
+        "active": true
+    },
+    {
+        "id": "345",
+        "name": "Moscow Mule",
+        "active": true
+    },
+    {
+        "id": "567",
+        "name": "Tavuk Bebek",
+        "active": true
+    }
+]
