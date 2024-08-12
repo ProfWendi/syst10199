@@ -1,0 +1,39 @@
+Week 8 worksheet 
+
+questions
+
+1. - it's more accessible - many older browsers and modern screen readers and other accessibility devices don't support JavaScript
+- PE: it allows you to follow the PE approach and separate JavaScript code from HTML code, making it more modular/re-usable
+
+2. a) everyone's browser supports JS: many older browsers don't, neither to screen readers;
+- all users should still be able to use your site even without JS
+b) all browsers work the same: they have different JS engines, accessible software doesn't work the same as "regular" browsers
+- the type of browser/device should not make any difference, even if the user is using a screen reader or whatever
+c) everyone should understand my code: code should always be "clean" - easy to read, maintain, extend, modify, etc.
+
+3. - follow PE: separate HTML/CSS/JS
+- JS should add a layer of usability (i.e. value-added) and should not be the only way to use the web site, it should work without JS
+- use clean, semantic HTML as the base for your JS - make use of semantic HTML elements (which are already accessible if used for their intended purpose)
+- scripts should work in as many browsers as possible and if it can't work, don't just show error messages e.g. "this site needs JS to work!", it should use "graceful degredation"
+
+4. JavaScript should be a "value-added", a "nice to have", not the only way your web site functions
+
+5. there are so many differences between browsers, so many inconsistencies, and very little in the way of debugging and testing tools, so it's hard to make good, unobtrusive javascript work in every browser
+
+6. allows you to search for various properties/functions/objects and find out how they are supported in all the different browsers
+
+7. we listed a bunch of them in class and in the materials: click (clicking on something), mouseover, mouseout (moving the mouse over something), drag (dragging the mouse), keypressed (pressing keys), change/input (changing a field's input value), DOMContentLoaded  (when document object model has finished loading/rendering)
+
+8. - you can only assign one event handler to an object's specific event property
+- you can't use an object as the event handler
+- not all events have properties e.g. DOMContentLoaded
+- no control over event delegation/propagation
+
+9. - you can assign more than one event handler to a single object for the same event
+- you can use an object as the event handler if it has the handleEvent() function 
+- you can handle any kind of event
+- you can configure event delegation/propagation
+ 
+10. you could check event.type for the type of event and then use an if stmt to route the logic to the appropriate block of code 
+e.g. if it's a click, do this, else if it's a mouse over, do that, etc...
+
