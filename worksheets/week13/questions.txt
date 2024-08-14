@@ -1,0 +1,18 @@
+week 13 questions
+
+1. to separate related controller tasks and make the code more modular/re-usable
+2. any url starting with menu/ followed by any number of path segments (or no path segments)
+3. http doesn't "remember" you between one request/response cycle and the next:
+when you connect to the server to make a request and then the response is sent, the server has no memory of that request
+4. session = a browsing session, can also refer to the session data/properties
+A session is used to store data about the client in between request/response cycles
+5. sessions store the data on the server instead of on the client machine, except 
+for the session id cookie; cookies store all data on the client machine
+when subsequent requests are made, the server checks for the session cookie and uses it to look up the stored data 
+with cookies, cookies are sent back to the server, the server can read and modify them and send them back to the client
+6. a session begins when the user visits the domain for the first time, or when they visit the domain for the first time after a previous session has expired
+sessions end when the session cookie expires, when the code programmatically destroys/invalidates the session, or when the app/server stops/restarts
+7. session cookie contains the session id, it's used to uniquely identify a specific session
+it's used as they key to look up the stored session data for that session 
+the session cookie is passed back and forth between client and server in each request/response
+
