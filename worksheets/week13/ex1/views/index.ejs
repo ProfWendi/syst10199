@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Circles Exercise</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+  <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Circles</h1>
+    </header>
+
+	<main>
+		<section>
+      <% if (locals.circle) {%>
+        <h2>Circle Information</h2>
+
+        <p><%=circle%></p>
+
+        <p>Circumference: <%=circle.circumference.toFixed(2)%></p>
+        <p>Area: <%=circle.area.toFixed(2)%></p>
+      <% } %>
+	  
+		</section>
+
+		<section>
+		  <h2>Enter Circle Radius</h2>
+		  <form method="post" action="/circleEx/circle">
+			<div><label for="rad">Radius:
+			  <input type="text" name="radius" id="rad" pattern="\d+(\.?\d*)">
+			</label></div>
+			<div><button type="submit">Make A Circle</button></div>
+		  </form>
+		</section>
+  
+    </main>
+	
+    <footer>
+      <address>&copy; 2023 Your Name Here</address>
+    </footer>
+  </body>
+</html>

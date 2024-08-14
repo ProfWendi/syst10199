@@ -1,0 +1,35 @@
+:root {
+    font: 16px Helvetica,Arial,sans-serif;
+    --main: #33001a;
+    --accent: #c2d6d6;
+}
+
+header, footer, main {
+    border: .2em solid var(--main);
+    border-radius: 5px;
+    margin: .75em .2em;
+    padding: .5em;
+}
+
+header, footer {
+    background-color: var(--accent);
+}
+h1 {
+    color: var(--main);
+}
+
+p > span {
+    font-weight: bold;
+}
+
+form {
+    background-color: var(--accent);
+    margin: .25em;
+    padding: .75em;
+}
+form div {
+    margin: .3em .1em;
+}
+label {
+    font-weight: bold;
+}
