@@ -29,3 +29,25 @@ function summary(event) {
     }
     
 }
+
+/*
+ for html live region:
+  <!-- make this a live region so that a screen reader user is informed of updates -->
+    <section aria-live="polite" aria-label="Selection Summary"></section>
+
+    Answer to question:
+    using a <ul> for a list of items to interact with is 
+    not accessible to all users e.g. keyboard navigation 
+    and screen readers: <ul> and <li> are not normally 
+    focusable or interactive, so they violate design patterns
+    and can confuse many users - many users won't realize
+    they can be clicked.  Users who rely on keyboard navigation 
+    can't navigate or click on them with the keyboard.
+
+    Fix: make them focusable and interactive by adding 
+    key handlers, but even better: stick with standard
+    design patterns!! Eg. use a form with check boxes
+    or a list of buttons - most of the functionality 
+    is already built in so you don't have to add code 
+    to handle keyboard navigation, for example.
+*/

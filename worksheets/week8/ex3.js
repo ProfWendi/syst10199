@@ -4,9 +4,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     let divs = document.body.querySelectorAll(".collapsible");
+    let index = 0;
     for (let div of divs) {
     	div.firstElementChild.onclick = showHide;
 		div.lastElementChild.classList.add("hide");
+        div.lastElementChild.setAttribute("aria-live", "polite");
+        div.lastElementChild.setAttribute("tabindex", index);
+        index++;
     }
 
 });
